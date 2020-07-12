@@ -1,9 +1,0 @@
-com/dius/store/core/utils/TestHelper.class
-com/dius/store/core/CheckoutTest.class
-com/dius/store/core/ComputerStoreImplTest.class
-com/dius/store/rules/BulkDiscountRuleTest.class
-com/dius/store/core/ShoppingCartTest.class
-com/dius/store/app/ComputerStoreTest.class
-com/dius/store/rules/BuyForXPayForYRuleTest.class
-com/dius/store/core/CatalogueTest.class
-com/dius/store/rules/OneForOneBundleRuleTest.class
