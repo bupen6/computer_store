@@ -10,16 +10,18 @@ import java.util.List;
 
 public class BuyXGetDiscountRule implements PricingRule {
     private ProductCode productCode;
+    private int discountQuantity;
 
-    public BuyXGetDiscountRule(ProductCode productCode) {
+    public BuyXGetDiscountRule(ProductCode productCode, int discountQuantity) {
         this.productCode = productCode;
+        this.discountQuantity = discountQuantity;
     }
 
     @Override
     public void apply(ShoppingCart shoppingCart) {
         List<Product> productList = shoppingCart.getProducts(productCode);
         for (int i=0; i<productList.size(); i++) {
-            if (i+1 == 3) {
+            if (i+1 == discountQuantity) {
                 Product product = productList.get(i);
                 product.setPrice(new BigDecimal(0));
             }

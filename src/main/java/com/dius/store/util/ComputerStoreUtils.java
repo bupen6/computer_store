@@ -27,7 +27,7 @@ public class ComputerStoreUtils {
 
     public Map<ProductCode, PricingRule> getPricingRules() {
         Map<ProductCode, PricingRule> pricingRules =  new HashMap<>();
-        pricingRules.put(ProductCode.ATV, new BuyXGetDiscountRule(ProductCode.ATV));
+        pricingRules.put(ProductCode.ATV, new BuyXGetDiscountRule(ProductCode.ATV, 3));
         pricingRules.put(ProductCode.IPD, new BulkDiscountRule(ProductCode.IPD, 4, new BigDecimal(499.99)));
         pricingRules.put(ProductCode.VGA, new BuyXFreeBundleYRule(ProductCode.MBP, ProductCode.VGA));
         return pricingRules;
