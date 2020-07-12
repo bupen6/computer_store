@@ -8,7 +8,6 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Matchers.any;
@@ -20,8 +19,6 @@ import static org.mockito.Mockito.when;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ShoppingCart.class)
 public class ShoppingCartTest {
-    List<Product> shoppingCartList = new ArrayList<>();
-
 
     @Test
     public void addProductToCartExecutionTestSuccess() {

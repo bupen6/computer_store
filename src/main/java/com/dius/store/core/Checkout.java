@@ -26,7 +26,7 @@ public class Checkout{
         shoppingCart.addProductToCart(catalogue.getNewProduct(productCode));
         PricingRule pricingRule = pricingRules.get(productCode);
         if (pricingRule != null) {
-            pricingRule.apply(shoppingCart, catalogue);
+            pricingRule.apply(shoppingCart);
         }
     }
 

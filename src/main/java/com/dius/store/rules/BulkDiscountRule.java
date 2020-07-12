@@ -1,7 +1,6 @@
 package com.dius.store.rules;
 
 import com.dius.store.constants.ProductCode;
-import com.dius.store.core.Catalogue;
 import com.dius.store.core.ShoppingCart;
 import com.dius.store.core.interfaces.PricingRule;
 import com.dius.store.model.Product;
@@ -22,7 +21,7 @@ public class BulkDiscountRule implements PricingRule {
     }
 
     @Override
-    public void apply(ShoppingCart shoppingCart, Catalogue catalogue) {
+    public void apply(ShoppingCart shoppingCart) {
         List<Product> products = shoppingCart.getProducts(productCode);
         if (products.size() > discountQuantity) {
             products.forEach(product -> product.setPrice(discountPrice));

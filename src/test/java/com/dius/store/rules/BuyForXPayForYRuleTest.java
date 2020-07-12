@@ -1,6 +1,5 @@
 package com.dius.store.rules;
 
-import com.dius.store.core.Catalogue;
 import com.dius.store.core.ShoppingCart;
 import com.dius.store.core.interfaces.PricingRule;
 import org.junit.Test;
@@ -20,11 +19,10 @@ public class BuyForXPayForYRuleTest {
 
     @Test
     public void applyExecutionTest() {
-        PricingRule pricingRule = mock(BuyForXPayForYRule.class);
+        PricingRule pricingRule = mock(BuyXGetDiscountRule.class);
         ShoppingCart shoppingCart = mock(ShoppingCart.class);
-        Catalogue catalogue = mock(Catalogue.class);
-        doNothing().when(pricingRule).apply(any(ShoppingCart.class), any(Catalogue.class));
-        pricingRule.apply(shoppingCart, catalogue);
-        verify(pricingRule).apply(shoppingCart, catalogue);
+        doNothing().when(pricingRule).apply(any(ShoppingCart.class));
+        pricingRule.apply(shoppingCart);
+        verify(pricingRule).apply(shoppingCart);
     }
 }
